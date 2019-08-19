@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A685FD9230B297600E72E4B /* Spin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; };
+		1A685FDA230B297600E72E4B /* Spin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A9366962308F0B1006B04D7 /* AnyPublisher+Spin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */; };
 		1AF21E242308EE2100E7197F /* Spin_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF21E1A2308EE2100E7197F /* Spin_Combine.framework */; };
 		1AF21E292308EE2100E7197F /* Spin_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF21E282308EE2100E7197F /* Spin_CombineTests.swift */; };
 		1AF21E2B2308EE2100E7197F /* Spin_Combine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF21E1D2308EE2100E7197F /* Spin_Combine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,7 +25,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1A685FDB230B297600E72E4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1A685FDA230B297600E72E4B /* Spin.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1A685FD8230B297600E72E4B /* Spin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spin.framework; path = Carthage/Build/iOS/Spin.framework; sourceTree = "<group>"; };
+		1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Spin.swift"; sourceTree = "<group>"; };
 		1AF21E1A2308EE2100E7197F /* Spin_Combine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spin_Combine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF21E1D2308EE2100E7197F /* Spin_Combine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spin_Combine.h; sourceTree = "<group>"; };
 		1AF21E1E2308EE2100E7197F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A685FD9230B297600E72E4B /* Spin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +70,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A685FD7230B297500E72E4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A685FD8230B297600E72E4B /* Spin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1AF21E102308EE2000E7197F = {
 			isa = PBXGroup;
 			children = (
 				1AF21E1C2308EE2100E7197F /* Spin.Combine */,
 				1AF21E272308EE2100E7197F /* Spin.CombineTests */,
 				1AF21E1B2308EE2100E7197F /* Products */,
+				1A685FD7230B297500E72E4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +102,7 @@
 			children = (
 				1AF21E1D2308EE2100E7197F /* Spin_Combine.h */,
 				1AF21E1E2308EE2100E7197F /* Info.plist */,
+				1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */,
 			);
 			path = Spin.Combine;
 			sourceTree = "<group>";
@@ -108,6 +138,7 @@
 				1AF21E162308EE2100E7197F /* Sources */,
 				1AF21E172308EE2100E7197F /* Frameworks */,
 				1AF21E182308EE2100E7197F /* Resources */,
+				1A685FDB230B297600E72E4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +179,7 @@
 				TargetAttributes = {
 					1AF21E192308EE2100E7197F = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					1AF21E222308EE2100E7197F = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9366962308F0B1006B04D7 /* AnyPublisher+Spin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +373,17 @@
 		1AF21E2F2308EE2100E7197F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3V5265LQM9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Spin.Combine/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -353,10 +391,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.warpfactor.Spin-Combine";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.warpfactor.Spin.Combine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -364,12 +404,17 @@
 		1AF21E302308EE2100E7197F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3V5265LQM9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Spin.Combine/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -377,10 +422,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.warpfactor.Spin-Combine";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.warpfactor.Spin.Combine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -388,6 +434,7 @@
 		1AF21E322308EE2100E7197F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V5265LQM9;
 				INFOPLIST_FILE = Spin.CombineTests/Info.plist;
@@ -396,7 +443,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.warpfactor.Spin-CombineTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.warpfactor.Spin.CombineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,6 +453,7 @@
 		1AF21E332308EE2100E7197F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V5265LQM9;
 				INFOPLIST_FILE = Spin.CombineTests/Info.plist;
@@ -414,7 +462,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.warpfactor.Spin-CombineTests";
+				PRODUCT_BUNDLE_IDENTIFIER = io.warpfactor.Spin.CombineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
