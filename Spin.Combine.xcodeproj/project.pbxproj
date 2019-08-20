@@ -10,6 +10,7 @@
 		1A685FD9230B297600E72E4B /* Spin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; };
 		1A685FDA230B297600E72E4B /* Spin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A9366962308F0B1006B04D7 /* AnyPublisher+Spin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */; };
+		1AC3BB4F230B827A0019880E /* Spin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AF21E242308EE2100E7197F /* Spin_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF21E1A2308EE2100E7197F /* Spin_Combine.framework */; };
 		1AF21E292308EE2100E7197F /* Spin_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF21E282308EE2100E7197F /* Spin_CombineTests.swift */; };
 		1AF21E2B2308EE2100E7197F /* Spin_Combine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF21E1D2308EE2100E7197F /* Spin_Combine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +36,16 @@
 				1A685FDA230B297600E72E4B /* Spin.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AC3BB4E230B82720019880E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AC3BB4F230B827A0019880E /* Spin.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -156,6 +167,7 @@
 				1AF21E1F2308EE2100E7197F /* Sources */,
 				1AF21E202308EE2100E7197F /* Frameworks */,
 				1AF21E212308EE2100E7197F /* Resources */,
+				1AC3BB4E230B82720019880E /* CopyFiles */,
 			);
 			buildRules = (
 			);
