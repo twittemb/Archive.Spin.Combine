@@ -26,7 +26,11 @@ extension AnyPublisher: Producer & Consumable {
     public func scan<Result>(initial value: Result, reducer: @escaping (Result, Value) -> Result) -> AnyConsumable<Result, Context, Runtime> {
         return self.scan(value, reducer).eraseToAnyPublisher().eraseToAnyConsumable()
     }
-
+    
+    public func toStream() -> Input {
+        return self
+    }
+    
     public func consume(by: @escaping (Value) -> Void, on: Context) -> AnyConsumable<Value, Context, Runtime> {
         return self.receive(on: on).handleEvents(receiveOutput: by).eraseToAnyPublisher().eraseToAnyConsumable()
     }
