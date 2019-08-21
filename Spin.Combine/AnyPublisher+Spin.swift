@@ -39,7 +39,7 @@ extension AnyPublisher: Producer & Consumable {
         return self.handleEvents(receiveOutput: function).eraseToAnyPublisher().eraseToAnyProducer()
     }
 
-    public func engage() -> Runtime {
+    public func spin() -> Runtime {
         return self.subscribe(PassthroughSubject<Value, Failure>())
     }
 }
