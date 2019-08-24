@@ -26,11 +26,7 @@ extension AnyPublisher: Producer & Consumable {
     public func scan<Result>(initial value: Result, reducer: @escaping (Result, Value) -> Result) -> AnyConsumable<Result, Context, Runtime> {
         return self.scan(value, reducer).eraseToAnyPublisher().eraseToAnyConsumable()
     }
-    
-    public func toStream() -> Input {
-        return self
-    }
-    
+        
     public func consume(by: @escaping (Value) -> Void, on: Context) -> AnyConsumable<Value, Context, Runtime> {
         return self.receive(on: on).handleEvents(receiveOutput: by).eraseToAnyPublisher().eraseToAnyConsumable()
     }
@@ -42,4 +38,17 @@ extension AnyPublisher: Producer & Consumable {
     public func spin() -> Runtime {
         return self.subscribe(PassthroughSubject<Value, Failure>())
     }
+    
+    public func toReactiveStream() -> Input {
+        return self
+    }
 }
+
+public extension AnyCancellable {
+    func disposed(by disposables: inout [AnyCancellable]) {
+        self.store(in: &disposables)
+    }
+}
+
+public typealias Spin<Value, Error: Error> = AnyProducer<AnyPublisher<Value, Error>, Value, DispatchQueue, AnyCancellable>
+

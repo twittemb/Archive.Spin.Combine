@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A685FD9230B297600E72E4B /* Spin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; };
-		1A685FDA230B297600E72E4B /* Spin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A606C272311D9A900382316 /* Spin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; };
 		1A9366962308F0B1006B04D7 /* AnyPublisher+Spin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */; };
 		1AC3BB4F230B827A0019880E /* Spin.framework in 📦 Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AF21E242308EE2100E7197F /* Spin_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF21E1A2308EE2100E7197F /* Spin_Combine.framework */; };
-		1AF21E292308EE2100E7197F /* Spin_CombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF21E282308EE2100E7197F /* Spin_CombineTests.swift */; };
+		1AF21E292308EE2100E7197F /* AnyPublisher+SpinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF21E282308EE2100E7197F /* AnyPublisher+SpinTests.swift */; };
 		1AF21E2B2308EE2100E7197F /* Spin_Combine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF21E1D2308EE2100E7197F /* Spin_Combine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -27,17 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1A685FDB230B297600E72E4B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1A685FDA230B297600E72E4B /* Spin.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1AC3BB4E230B82720019880E /* 📦 Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,7 +46,7 @@
 		1AF21E1D2308EE2100E7197F /* Spin_Combine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spin_Combine.h; sourceTree = "<group>"; };
 		1AF21E1E2308EE2100E7197F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AF21E232308EE2100E7197F /* Spin.CombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spin.CombineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AF21E282308EE2100E7197F /* Spin_CombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spin_CombineTests.swift; sourceTree = "<group>"; };
+		1AF21E282308EE2100E7197F /* AnyPublisher+SpinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+SpinTests.swift"; sourceTree = "<group>"; };
 		1AF21E2A2308EE2100E7197F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A685FD9230B297600E72E4B /* Spin.framework in Frameworks */,
+				1A606C272311D9A900382316 /* Spin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +110,7 @@
 		1AF21E272308EE2100E7197F /* Spin.CombineTests */ = {
 			isa = PBXGroup;
 			children = (
-				1AF21E282308EE2100E7197F /* Spin_CombineTests.swift */,
+				1AF21E282308EE2100E7197F /* AnyPublisher+SpinTests.swift */,
 				1AF21E2A2308EE2100E7197F /* Info.plist */,
 			);
 			path = Spin.CombineTests;
@@ -150,7 +138,6 @@
 				1AF21E162308EE2100E7197F /* Sources */,
 				1AF21E172308EE2100E7197F /* Frameworks */,
 				1AF21E182308EE2100E7197F /* Resources */,
-				1A685FDB230B297600E72E4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AF21E292308EE2100E7197F /* Spin_CombineTests.swift in Sources */,
+				1AF21E292308EE2100E7197F /* AnyPublisher+SpinTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +437,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V5265LQM9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Spin.CombineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +460,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V5265LQM9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Spin.CombineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
