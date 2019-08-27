@@ -49,6 +49,3 @@ public extension AnyCancellable {
         self.store(in: &disposables)
     }
 }
-
-public typealias Spin<Value, Error: Error> = AnyProducer<AnyPublisher<Value, Error>, Value, DispatchQueue, AnyCancellable>
-

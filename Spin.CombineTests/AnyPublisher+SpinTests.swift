@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Spin
 import Spin_Combine
 import XCTest
 
