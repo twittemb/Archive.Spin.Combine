@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A18B0552330627A00C6145F /* Publisher+withLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A18B0542330627A00C6145F /* Publisher+withLatestFrom.swift */; };
+		1A18B0572330769800C6145F /* Publisher+withLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A18B0562330769800C6145F /* Publisher+withLatestFrom.swift */; };
 		1A606C272311D9A900382316 /* Spin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; };
 		1A9366962308F0B1006B04D7 /* AnyPublisher+Spin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */; };
 		1AC3BB4F230B827A0019880E /* Spin.framework in 📦 Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -40,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A18B0542330627A00C6145F /* Publisher+withLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+withLatestFrom.swift"; sourceTree = "<group>"; };
+		1A18B0562330769800C6145F /* Publisher+withLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+withLatestFrom.swift"; sourceTree = "<group>"; };
 		1A685FD8230B297600E72E4B /* Spin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spin.framework; path = Carthage/Build/iOS/Spin.framework; sourceTree = "<group>"; };
 		1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Spin.swift"; sourceTree = "<group>"; };
 		1AF21E1A2308EE2100E7197F /* Spin_Combine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spin_Combine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,7 @@
 				1AF21E1D2308EE2100E7197F /* Spin_Combine.h */,
 				1AF21E1E2308EE2100E7197F /* Info.plist */,
 				1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */,
+				1A18B0542330627A00C6145F /* Publisher+withLatestFrom.swift */,
 			);
 			path = Spin.Combine;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1AF21E282308EE2100E7197F /* AnyPublisher+SpinTests.swift */,
+				1A18B0562330769800C6145F /* Publisher+withLatestFrom.swift */,
 				1AF21E2A2308EE2100E7197F /* Info.plist */,
 			);
 			path = Spin.CombineTests;
@@ -228,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9366962308F0B1006B04D7 /* AnyPublisher+Spin.swift in Sources */,
+				1A18B0552330627A00C6145F /* Publisher+withLatestFrom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF21E292308EE2100E7197F /* AnyPublisher+SpinTests.swift in Sources */,
+				1A18B0572330769800C6145F /* Publisher+withLatestFrom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
