@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		1A18B0552330627A00C6145F /* Publisher+withLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A18B0542330627A00C6145F /* Publisher+withLatestFrom.swift */; };
 		1A18B0572330769800C6145F /* Publisher+withLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A18B0562330769800C6145F /* Publisher+withLatestFrom.swift */; };
-		1A606C272311D9A900382316 /* Spin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; };
 		1A9366962308F0B1006B04D7 /* AnyPublisher+Spin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9366952308F0B1006B04D7 /* AnyPublisher+Spin.swift */; };
-		1AC3BB4F230B827A0019880E /* Spin.framework in 📦 Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AF21E242308EE2100E7197F /* Spin_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF21E1A2308EE2100E7197F /* Spin_Combine.framework */; };
 		1AF21E292308EE2100E7197F /* AnyPublisher+SpinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF21E282308EE2100E7197F /* AnyPublisher+SpinTests.swift */; };
 		1AF21E2B2308EE2100E7197F /* Spin_Combine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF21E1D2308EE2100E7197F /* Spin_Combine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		747DDD71234A751B003A0DCB /* Spin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; };
+		747DDD72234A751B003A0DCB /* Spin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		747DDD74234A7526003A0DCB /* Spin.framework in 📦 Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1A685FD8230B297600E72E4B /* Spin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +35,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1AC3BB4F230B827A0019880E /* Spin.framework in 📦 Copy Frameworks */,
+				747DDD74234A7526003A0DCB /* Spin.framework in 📦 Copy Frameworks */,
 			);
 			name = "📦 Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		747DDD73234A751B003A0DCB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				747DDD72234A751B003A0DCB /* Spin.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -59,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A606C272311D9A900382316 /* Spin.framework in Frameworks */,
+				747DDD71234A751B003A0DCB /* Spin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +156,7 @@
 				1AF21E162308EE2100E7197F /* Sources */,
 				1AF21E172308EE2100E7197F /* Frameworks */,
 				1AF21E182308EE2100E7197F /* Resources */,
+				747DDD73234A751B003A0DCB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -404,7 +417,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -434,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.warpfactor.Spin.Combine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
