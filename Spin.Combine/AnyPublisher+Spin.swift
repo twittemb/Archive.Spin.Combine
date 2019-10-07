@@ -30,7 +30,7 @@ extension AnyPublisher: Consumable {
 extension AnyPublisher: Producer where Value: Command, Value.Stream: Publisher, Value.Stream.Output == Value.Stream.Value, Failure == Never {
     public typealias Input = AnyPublisher
 
-    public func feedback(initial value: Value.State, reducer: @escaping (Value.State, Value.Stream.Value) -> Value.State) -> AnyConsumable<Value.State, Executer, Lifecycle> {
+    public func executeAndScan(initial value: Value.State, reducer: @escaping (Value.State, Value.Stream.Value) -> Value.State) -> AnyConsumable<Value.State, Executer, Lifecycle> {
         let currentState = CurrentValueSubject<Value.State, Never>(value)
 
         return self
